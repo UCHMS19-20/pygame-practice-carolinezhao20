@@ -32,7 +32,7 @@ while True:
             color_index += 1
             if color_index >= 6:
                 color_index = 0
-        text = font.render("ke$ha", True, colors[color_index])
+        text = font.render("$", True, colors[color_index])
     screen.fill((0, 0, 0))
     screen.blit(text, pygame.mouse.get_pos())
     pygame.display.flip()
