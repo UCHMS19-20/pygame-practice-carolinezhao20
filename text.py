@@ -4,7 +4,7 @@ import pygame
 # Initialize pygame so it runs in the background and manages things
 pygame.init()
 
-#colors
+# colors
 red = pygame.Color(255, 0, 0)
 orange = pygame.Color(255, 165, 0)
 yellow = pygame.Color(255, 255, 0)
@@ -17,6 +17,8 @@ color_index = 0
 # Create a display. Size must be a tuple, which is why it's in parentheses
 screen = pygame.display.set_mode( (400, 300) )
 
+font = pygame.font.SysFont("Helvetica", 40)
+
 # Main loop. Your game would go inside this loop
 while True:
     # do something for each event in the event queue (list of things that happen)
@@ -26,3 +28,11 @@ while True:
         if event.type == pygame.QUIT:
             # If so, exit the program
             sys.exit()
+        if event.type == 4:
+            color_index += 1
+            if color_index >= 6:
+                color_index = 0
+        text = font.render("ke$ha", True, colors[color_index])
+    screen.fill((0, 0, 0))
+    screen.blit(text, pygame.mouse.get_pos())
+    pygame.display.flip()

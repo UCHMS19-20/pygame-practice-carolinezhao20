@@ -4,6 +4,7 @@ import pygame
 # Initialize pygame so it runs in the background and manages things
 pygame.init()
 
+# colors
 red = pygame.Color(255, 0, 0)
 orange = pygame.Color(255, 165, 0)
 yellow = pygame.Color(255, 255, 0)
